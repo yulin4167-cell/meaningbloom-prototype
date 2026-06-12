@@ -156,9 +156,12 @@ const T = {
     liveInterpOutputLabel: 'Staff sees (English):', liveInterpTyping: 'Visitor is speaking…',
     liveInterpDemoNote: '',
     micStart: '🎤 Speak', micStop: '⏹ Stop', micListening: '● Listening…',
-    micUnsupported: 'Voice not supported — please type below.',
+    micUnsupported: 'Voice input not supported on this browser — please type below.',
+    micDenied: 'Microphone access denied — please allow it in your browser settings.',
     lipClearBtn: 'Clear',
     startLbl: 'Start',
+    startNormal: 'Start →',
+    startWithInterp: '🎤 Start with Live Interpretation',
     roleTagline: 'Let meaning unfold beyond fragmented English.',
     visitorSharedBadge: 'Visitor has shared their request',
     visitorLanguageLbl: "Visitor's language:",
@@ -262,9 +265,12 @@ const T = {
     liveInterpInput: '用你的语言说话或输入…',
     liveInterpOutputLabel: '工作人员看到（英文）：', liveInterpTyping: '访客正在发言…',
     micStart: '🎤 说话', micStop: '⏹ 停止', micListening: '● 正在聆听…',
-    micUnsupported: '不支持语音 — 请在下方输入文字。',
+    micUnsupported: '此浏览器不支持语音输入 — 请在下方输入文字。',
+    micDenied: '麦克风访问被拒绝 — 请在浏览器设置中允许。',
     lipClearBtn: '清除',
     startLbl: '开始',
+    startNormal: '开始 →',
+    startWithInterp: '🎤 开始同声传译',
     roleTagline: '让意义在不完整的英语之外展开。',
     visitorSharedBadge: '访客已分享他们的请求',
     visitorLanguageLbl: '访客的语言：',
@@ -372,7 +378,8 @@ const T = {
     liveInterpActive: '● 傳譯中', liveInterpOff: '關閉',
     liveInterpInput: '用你嘅語言輸入 — 職員會見到你嘅訊息。',
     liveInterpOutputLabel: '職員見到：', liveInterpTyping: '訪客正在輸入…',
-    startLbl: '開始',
+    startLbl: '開始', startNormal: '開始 →', startWithInterp: '🎤 開始即時傳譯',
+    micDenied: '麥克風存取被拒絕 — 請在瀏覽器設定中允許。',
     roleTagline: '讓意思喺唔完整嘅英語之外展開。',
     visitorSharedBadge: '訪客已分享佢嘅請求',
     visitorLanguageLbl: '訪客嘅語言：',
@@ -480,7 +487,8 @@ const T = {
     liveInterpActive: '● En vivo', liveInterpOff: 'Apagar',
     liveInterpInput: 'Escribe en tu idioma — el personal verá tu mensaje.',
     liveInterpOutputLabel: 'El personal ve:', liveInterpTyping: 'El visitante está escribiendo…',
-    startLbl: 'Inicio',
+    startLbl: 'Inicio', startNormal: 'Comenzar →', startWithInterp: '🎤 Iniciar con interpretación',
+    micDenied: 'Acceso al micrófono denegado — permítelo en la configuración del navegador.',
     roleTagline: 'Deja que el significado se despliegue más allá del inglés fragmentado.',
     visitorSharedBadge: 'El visitante ha compartido su solicitud',
     visitorLanguageLbl: 'Idioma del visitante:',
@@ -588,7 +596,8 @@ const T = {
     liveInterpActive: '● Đang dịch', liveInterpOff: 'Tắt',
     liveInterpInput: 'Nhập bằng ngôn ngữ của bạn — nhân viên sẽ thấy tin nhắn của bạn.',
     liveInterpOutputLabel: 'Nhân viên thấy:', liveInterpTyping: 'Khách đang nhập…',
-    startLbl: 'Bắt đầu',
+    startLbl: 'Bắt đầu', startNormal: 'Bắt đầu →', startWithInterp: '🎤 Bắt đầu với thông dịch',
+    micDenied: 'Truy cập micro bị từ chối — vui lòng cho phép trong cài đặt trình duyệt.',
     roleTagline: 'Để ý nghĩa mở ra vượt ra ngoài tiếng Anh không hoàn chỉnh.',
     visitorSharedBadge: 'Khách đã chia sẻ yêu cầu',
     visitorLanguageLbl: 'Ngôn ngữ của khách:',
@@ -695,7 +704,8 @@ const T = {
     liveInterpActive: '● Live', liveInterpOff: 'I-off',
     liveInterpInput: 'Mag-type sa iyong wika — makikita ng kawani ang iyong mensahe.',
     liveInterpOutputLabel: 'Nakikita ng kawani:', liveInterpTyping: 'Nag-ta-type ang bisita…',
-    startLbl: 'Simula',
+    startLbl: 'Simula', startNormal: 'Simulan →', startWithInterp: '🎤 Simulan na may interpretasyon',
+    micDenied: 'Tinanggihan ang access sa mikropono — payagan ito sa mga setting ng browser.',
     roleTagline: 'Hayaang mabuklat ang kahulugan lampas sa sirang Ingles.',
     visitorSharedBadge: 'Ibinahagi na ng bisita ang kanilang kahilingan',
     visitorLanguageLbl: 'Wika ng bisita:',
@@ -803,7 +813,8 @@ const T = {
     liveInterpActive: '● В эфире', liveInterpOff: 'Выключить',
     liveInterpInput: 'Пишите на вашем языке — сотрудник увидит ваше сообщение.',
     liveInterpOutputLabel: 'Сотрудник видит:', liveInterpTyping: 'Посетитель печатает…',
-    startLbl: 'Начало',
+    startLbl: 'Начало', startNormal: 'Начать →', startWithInterp: '🎤 Начать с переводом',
+    micDenied: 'Доступ к микрофону запрещён — разрешите в настройках браузера.',
     roleTagline: 'Пусть смысл раскроется за пределами фрагментарного английского.',
     visitorSharedBadge: 'Посетитель поделился своим запросом',
     visitorLanguageLbl: 'Язык посетителя:',
@@ -1315,6 +1326,7 @@ export default function App() {
               }}
               currentLang={customerLanguage}
               customerExtLang={customerExtLang}
+              lang={customerLanguage}
             />
           )}
           {customerScreen === -1 && (
@@ -1781,48 +1793,77 @@ function LangPanel({ currentLang, extLang, onSelect, onClose }) {
 function LiveInterpPanel({ lang, speechLang, nativeLangLabel, text, setText, translatedText, translating, onClose }) {
   const [listening, setListening]   = useState(false)
   const [supported, setSupported]   = useState(true)
+  const [micDenied, setMicDenied]   = useState(false)
   const [interimText, setInterimText] = useState('')
-  const recogRef  = useRef(null)
-  const baseRef   = useRef('')   // text value when recognition started
-  const langCode  = speechLang || SPEECH_LANG_CODES[lang] || 'en-US'
+  const recogRef    = useRef(null)
+  const baseRef     = useRef('')
+  const shouldKeepRef = useRef(false) // tracks intent to stay listening (for iOS restart)
+  const langCode    = speechLang || SPEECH_LANG_CODES[lang] || 'en-US'
 
   useEffect(() => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) setSupported(false)
   }, [])
 
-  /* stop recognition when component unmounts or lang changes */
   useEffect(() => {
-    return () => { recogRef.current?.stop(); recogRef.current = null }
+    return () => {
+      shouldKeepRef.current = false
+      recogRef.current?.stop(); recogRef.current = null
+    }
   }, [])
 
-  const startListening = () => {
+  const startOnce = () => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) return
     const rec = new SR()
     recogRef.current = rec
-    rec.lang        = langCode
-    rec.continuous  = true
+    rec.lang = langCode
+    rec.continuous = true
     rec.interimResults = true
-    baseRef.current = text   // preserve anything already typed
+    baseRef.current = text
 
     rec.onresult = (e) => {
-      let finals = ''
-      let interim = ''
+      let finals = '', interim = ''
       for (let i = 0; i < e.results.length; i++) {
         if (e.results[i].isFinal) finals += e.results[i][0].transcript + ' '
         else interim += e.results[i][0].transcript
       }
       setInterimText(interim)
       setText((baseRef.current + ' ' + finals).trim())
+      if (finals) baseRef.current = (baseRef.current + ' ' + finals).trim()
     }
-    rec.onerror = () => { setListening(false); setInterimText('') }
-    rec.onend   = () => { setListening(false); setInterimText('') }
-    rec.start()
+    rec.onerror = (e) => {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        setMicDenied(true); setSupported(false)
+        shouldKeepRef.current = false
+      }
+      setListening(false); setInterimText('')
+    }
+    rec.onend = () => {
+      setInterimText('')
+      /* iOS Safari stops after each utterance — restart if user still wants to listen */
+      if (shouldKeepRef.current) {
+        setTimeout(() => { if (shouldKeepRef.current) startOnce() }, 150)
+      } else {
+        setListening(false)
+      }
+    }
+    try {
+      rec.start()
+    } catch (_) {
+      setListening(false)
+    }
+  }
+
+  const startListening = () => {
+    setMicDenied(false)
+    shouldKeepRef.current = true
     setListening(true)
+    startOnce()
   }
 
   const stopListening = () => {
+    shouldKeepRef.current = false
     recogRef.current?.stop()
     recogRef.current = null
     setListening(false)
@@ -1852,7 +1893,10 @@ function LiveInterpPanel({ lang, speechLang, nativeLangLabel, text, setText, tra
           🌐 {langLabel || 'English'}
           {lang !== 'en' && lang !== 'other' && <span className="lip-lang-arrow"> → English</span>}
         </span>
-        {!supported && (
+        {micDenied && (
+          <span className="lip-unsupported lip-unsupported--denied">{t('micDenied', lang)}</span>
+        )}
+        {!supported && !micDenied && (
           <span className="lip-unsupported">{t('micUnsupported', lang)}</span>
         )}
       </div>
@@ -1909,7 +1953,7 @@ function LiveInterpPanel({ lang, speechLang, nativeLangLabel, text, setText, tra
 /* ─────────────────────────────────────────────
    CS0 — Language Selection (first screen)
 ───────────────────────────────────────────── */
-function CS0({ onSelectLang, onStart, currentLang, customerExtLang }) {
+function CS0({ onSelectLang, onStart, currentLang, customerExtLang, lang }) {
   const [showWorld, setShowWorld] = useState(false)
   const [query, setQuery]         = useState('')
   const [interpOn, setInterpOn]   = useState(false)
@@ -2027,7 +2071,7 @@ function CS0({ onSelectLang, onStart, currentLang, customerExtLang }) {
         className={`cs0-start-btn ${interpOn ? 'cs0-start-btn--interp' : ''}`}
         onClick={() => onStart(interpOn)}
       >
-        {interpOn ? '🎤 Start with Live Interpretation' : 'Start →'}
+        {interpOn ? t('startWithInterp', lang) : t('startNormal', lang)}
       </button>
     </div>
   )
@@ -2039,19 +2083,24 @@ function CS0({ onSelectLang, onStart, currentLang, customerExtLang }) {
 function CSInterp({ lang, speechLang, nativeLangLabel, text, setText, translatedText, translating, onGoToHelp, staffReply, staffReplyTranslated, staffReplying }) {
   const [listening, setListening]     = useState(false)
   const [supported, setSupported]     = useState(true)
+  const [micDenied, setMicDenied]     = useState(false)
   const [interimText, setInterimText] = useState('')
-  const recogRef = useRef(null)
-  const baseRef  = useRef('')
-  const langCode = speechLang || 'en-US'
+  const recogRef      = useRef(null)
+  const baseRef       = useRef('')
+  const shouldKeepRef = useRef(false)
+  const langCode      = speechLang || 'en-US'
 
   useEffect(() => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) setSupported(false)
   }, [])
 
-  useEffect(() => () => { recogRef.current?.stop() }, [])
+  useEffect(() => () => {
+    shouldKeepRef.current = false
+    recogRef.current?.stop()
+  }, [])
 
-  const startListening = () => {
+  const startOnce = () => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) return
     const rec = new SR()
@@ -2066,13 +2115,35 @@ function CSInterp({ lang, speechLang, nativeLangLabel, text, setText, translated
       }
       setInterimText(interim)
       setText((baseRef.current + ' ' + finals).trim())
+      if (finals) baseRef.current = (baseRef.current + ' ' + finals).trim()
     }
-    rec.onerror = () => { setListening(false); setInterimText('') }
-    rec.onend   = () => { setListening(false); setInterimText('') }
-    rec.start(); setListening(true)
+    rec.onerror = (e) => {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        setMicDenied(true); setSupported(false)
+        shouldKeepRef.current = false
+      }
+      setListening(false); setInterimText('')
+    }
+    rec.onend = () => {
+      setInterimText('')
+      if (shouldKeepRef.current) {
+        setTimeout(() => { if (shouldKeepRef.current) startOnce() }, 150)
+      } else {
+        setListening(false)
+      }
+    }
+    try { rec.start() } catch (_) { setListening(false) }
+  }
+
+  const startListening = () => {
+    setMicDenied(false)
+    shouldKeepRef.current = true
+    setListening(true)
+    startOnce()
   }
 
   const stopListening = () => {
+    shouldKeepRef.current = false
     recogRef.current?.stop(); recogRef.current = null
     setListening(false); setInterimText('')
   }
@@ -2096,11 +2167,13 @@ function CSInterp({ lang, speechLang, nativeLangLabel, text, setText, translated
           >
             <span className="csi-mic-icon">{listening ? '⏹' : '🎤'}</span>
             <span className="csi-mic-label">
-              {listening ? 'Tap to stop' : 'Tap to speak'}
+              {listening ? t('micStop', lang) : t('micStart', lang)}
             </span>
           </button>
+        ) : micDenied ? (
+          <p className="csi-no-mic csi-no-mic--denied">{t('micDenied', lang)}</p>
         ) : (
-          <p className="csi-no-mic">Voice not supported — type below</p>
+          <p className="csi-no-mic">{t('micUnsupported', lang)}</p>
         )}
         {listening && interimText && (
           <p className="csi-interim">{interimText}</p>
@@ -2623,16 +2696,20 @@ function SS1({ goTo, selectedNeeds, selectedPrefs, requestShared, recoverySignal
   const [staffMicOn, setStaffMicOn]           = useState(false)
   const [staffMicInterim, setStaffMicInterim] = useState('')
   const [staffMicSupported, setStaffMicSupported] = useState(true)
-  const staffRecRef = useRef(null)
-  const staffReplyBase = useRef('')
+  const staffRecRef      = useRef(null)
+  const staffReplyBase   = useRef('')
+  const staffShouldKeep  = useRef(false)
 
   useEffect(() => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) setStaffMicSupported(false)
   }, [])
-  useEffect(() => () => { staffRecRef.current?.stop() }, [])
+  useEffect(() => () => {
+    staffShouldKeep.current = false
+    staffRecRef.current?.stop()
+  }, [])
 
-  const startStaffMic = () => {
+  const startStaffMicOnce = () => {
     const SR = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SR) return
     const rec = new SR()
@@ -2646,14 +2723,37 @@ function SS1({ goTo, selectedNeeds, selectedPrefs, requestShared, recoverySignal
         else interim += e.results[i][0].transcript
       }
       setStaffMicInterim(interim)
-      if (setStaffReply) setStaffReply((staffReplyBase.current + ' ' + finals).trim())
+      if (finals) {
+        staffReplyBase.current = (staffReplyBase.current + ' ' + finals).trim()
+        if (setStaffReply) setStaffReply(staffReplyBase.current)
+      }
     }
-    rec.onerror = () => { setStaffMicOn(false); setStaffMicInterim('') }
-    rec.onend   = () => { setStaffMicOn(false); setStaffMicInterim('') }
-    rec.start(); setStaffMicOn(true)
+    rec.onerror = (e) => {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        setStaffMicSupported(false)
+        staffShouldKeep.current = false
+      }
+      setStaffMicOn(false); setStaffMicInterim('')
+    }
+    rec.onend = () => {
+      setStaffMicInterim('')
+      if (staffShouldKeep.current) {
+        setTimeout(() => { if (staffShouldKeep.current) startStaffMicOnce() }, 150)
+      } else {
+        setStaffMicOn(false)
+      }
+    }
+    try { rec.start() } catch (_) { setStaffMicOn(false) }
+  }
+
+  const startStaffMic = () => {
+    staffShouldKeep.current = true
+    setStaffMicOn(true)
+    startStaffMicOnce()
   }
 
   const stopStaffMic = () => {
+    staffShouldKeep.current = false
     staffRecRef.current?.stop(); staffRecRef.current = null
     setStaffMicOn(false); setStaffMicInterim('')
   }

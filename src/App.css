@@ -1787,6 +1787,9 @@ blockquote {
 .lip-unsupported {
   font-size: 11px; color: var(--text-muted); font-style: italic;
 }
+.lip-unsupported--denied {
+  color: #c05050; font-style: normal; font-weight: 600;
+}
 
 /* Mic button */
 .lip-mic-btn {
@@ -2918,6 +2921,10 @@ blockquote {
 .csi-mic-label { font-size: 12px; font-weight: 700; color: #5e9070; }
 .csi-no-mic {
   font-size: 13px; color: var(--text-muted); font-style: italic; text-align: center;
+  max-width: 260px; line-height: 1.5; margin: 0;
+}
+.csi-no-mic--denied {
+  color: #c05050; font-style: normal; font-weight: 600;
 }
 .csi-interim {
   font-style: italic; font-size: 14px; color: var(--text-muted);
