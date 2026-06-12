@@ -1158,6 +1158,7 @@ export default function App() {
   const [staffReplyTranslated, setStaffReplyTranslated] = useState('')
   const [staffReplying, setStaffReplying]       = useState(false)
   const [dividerPulse, setDividerPulse]         = useState(false)
+  const [mobileView, setMobileView]             = useState('customer')
   const prevShared = useRef(false)
 
   const toggleNeed = (id) =>
@@ -1235,6 +1236,11 @@ export default function App() {
   const recoveryOpt   = allRecoveryOptions.find(o => o.id === selectedRecovery)
   const currentPhrase = editingPhrase ? customPhrase : (recoveryOpt?.phrase ?? '')
 
+  /* On mobile: auto-switch to visitor panel when staff sends a meaning check */
+  useEffect(() => {
+    if (showMeaningCheck) setMobileView('customer')
+  }, [showMeaningCheck])
+
   if (showSplash) return <SplashScreen onEnter={() => setShowSplash(false)} />
 
   /* ── Table layout — both panels always visible ── */
@@ -1242,8 +1248,30 @@ export default function App() {
     <div className="table-root">
       <AmbientField variant="warm" />
 
+      {/* ── Mobile tab switcher (hidden on desktop) ── */}
+      <div className="mobile-tabs" role="tablist">
+        <button
+          role="tab"
+          aria-selected={mobileView === 'customer'}
+          className={`mobile-tab ${mobileView === 'customer' ? 'mobile-tab--active' : ''}`}
+          onClick={() => setMobileView('customer')}
+        >
+          <span className="mobile-tab-icon">👤</span>
+          <span>Visitor</span>
+        </button>
+        <button
+          role="tab"
+          aria-selected={mobileView === 'staff'}
+          className={`mobile-tab ${mobileView === 'staff' ? 'mobile-tab--active' : ''}`}
+          onClick={() => setMobileView('staff')}
+        >
+          <span className="mobile-tab-icon">🧑‍💼</span>
+          <span>Staff</span>
+        </button>
+      </div>
+
       {/* ── Customer panel (left) ── */}
-      <div className="t-panel t-panel--customer">
+      <div className={`t-panel t-panel--customer${mobileView !== 'customer' ? ' mobile-panel-hidden' : ''}`}>
         <PanelNav
           role="customer" lang={customerLanguage}
           liveInterp={liveInterp}
@@ -1414,7 +1442,7 @@ export default function App() {
       </div>
 
       {/* ── Staff panel (right) ── */}
-      <div className="t-panel t-panel--staff">
+      <div className={`t-panel t-panel--staff${mobileView !== 'staff' ? ' mobile-panel-hidden' : ''}`}>
         <PanelNav
           role="staff" lang={staffLanguage} extLang={staffExtLang}
           showLangPanel={staffLangPanel}

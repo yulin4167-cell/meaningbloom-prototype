@@ -3089,3 +3089,172 @@ blockquote {
   font-family: 'DM Serif Display', serif;
   line-height: 1.5; margin: 0;
 }
+
+/* ══════════════════════════════════════════
+   MOBILE TAB BAR  (hidden on desktop)
+══════════════════════════════════════════ */
+.mobile-tabs {
+  display: none;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE LAYOUT
+   ≥ 900px  → desktop split-screen (unchanged)
+   < 900px  → single panel + tab switcher
+══════════════════════════════════════════ */
+@media (max-width: 899px) {
+
+  /* Stack root vertically */
+  .table-root {
+    flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  /* Hide unused panel */
+  .mobile-panel-hidden {
+    display: none !important;
+  }
+
+  /* Each panel fills remaining height below tab bar */
+  .t-panel--customer,
+  .t-panel--staff {
+    width: 100% !important;
+    flex: 1 1 0;
+    height: calc(100dvh - 48px);
+    min-height: 0;
+  }
+
+  /* Hide the center divider — it makes no sense in single-panel mode */
+  .t-divider {
+    display: none !important;
+  }
+
+  /* Mobile tab bar */
+  .mobile-tabs {
+    display: flex;
+    flex-shrink: 0;
+    height: 48px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1.5px solid rgba(0,0,0,0.08);
+    z-index: 60;
+    order: -1; /* always on top */
+  }
+  .mobile-tab {
+    flex: 1;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    border: none; border-bottom: 2.5px solid transparent;
+    background: transparent;
+    font-size: 14px; font-weight: 600; color: #8a8a8a;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .mobile-tab--active {
+    color: #5e9070;
+    border-bottom-color: #5e9070;
+    background: rgba(94,144,112,0.04);
+  }
+  .mobile-tab-icon { font-size: 16px; line-height: 1; }
+
+  /* Ambient field — reduce cost on mobile */
+  .ambient-field { opacity: 0.6; }
+
+  /* Panel nav height stays 48px, fine on mobile */
+
+  /* Splash — tighten layout */
+  .splash-content {
+    padding: 0 24px;
+    gap: 14px;
+  }
+  .splash-enter {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* CS0 — world language grid */
+  .cs0-world-grid,
+  .lp-world-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 6px !important;
+  }
+
+  /* SS1 tabs — stack vertically on narrow screens */
+  .ss1-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ss1-tab {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* SS1/SS2/SS3/SS4 — tighter padding */
+  .ss1-root,
+  .ss2-root,
+  .ss3-root,
+  .ss4-root {
+    padding: 12px 14px 24px;
+    gap: 12px;
+  }
+
+  /* CS screens — tighter padding */
+  .cs1-root,
+  .cs2-root,
+  .cs3-root,
+  .cs4-root,
+  .cs5-root {
+    padding: 16px 14px 24px;
+    gap: 12px;
+  }
+
+  /* CSInterp full-screen — stays full-panel */
+  .csi-root {
+    padding: 16px 16px 24px;
+    gap: 14px;
+  }
+
+  /* ClearLoop meaning check overlay */
+  .csmcheck-overlay { padding: 16px; }
+  .csmcheck-card { padding: 18px 16px; }
+
+  /* Buttons: ensure minimum 44px tap height */
+  button { min-height: 40px; }
+  .option-card { min-height: 56px; }
+
+  /* Live interp panel */
+  .live-interp-panel { padding: 12px 14px 14px; }
+
+  /* Language panel */
+  .lang-panel-wrap { max-height: calc(100dvh - 96px); }
+}
+
+/* ── Very narrow phones (< 480px) ── */
+@media (max-width: 479px) {
+  .cs0-world-grid,
+  .lp-world-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .splash-phrase {
+    font-size: 14px;
+  }
+  .csi-root { padding: 12px 12px 20px; }
+  .ss1-root,
+  .ss2-root,
+  .ss3-root,
+  .ss4-root {
+    padding: 10px 12px 20px;
+  }
+}
+
+/* ── Large/wide desktop (≥ 1400px) ── */
+@media (min-width: 1400px) {
+  .t-panel {
+    max-width: 760px;
+  }
+  .table-root {
+    justify-content: center;
+  }
+}
