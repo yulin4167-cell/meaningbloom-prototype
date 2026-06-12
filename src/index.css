@@ -1,0 +1,16 @@
+/* ClearLoop — global reset only. All layout lives in App.css. */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #c8bfb2;
+}
+
+#root {
+  /* Let App.css kiosk-wrapper control all layout */
+  width: 100%;
+  min-height: 100vh;
+}
